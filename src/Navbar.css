@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 91px;
+    background: #020203;
+}
+
+nav img {
+    height: 60px;
+    margin: 0 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-family: 'Roboto';
+    font-weight: 500;
+} 
+
+nav li {
+    margin: 0 100px;
+}
+
