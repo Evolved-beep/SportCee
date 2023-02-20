@@ -1,5 +1,30 @@
 .bar_container{
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 117px;
+    max-height: 100%;
     background-color: #020203;
+
 } 
+
+.bar_container span {
+    text-align: end;
+    font-family: 'Roboto';
+    font-size: 12px;
+    transform: rotate(-90deg);
+    color: rgba(255, 255, 255, 1);
+}
+
+.icon_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 1);
+    margin-bottom: 10px;
+}
+
