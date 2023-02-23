@@ -1,5 +1,11 @@
 import React from "react";
 
+/**
+ * @component
+ * @param {object} value contain user general value (protein, calories, lipid)
+ * @returns number and string 
+ */
+
 const Userdetail = ({value}) => {
     return(
         <div className="user_detail_container">

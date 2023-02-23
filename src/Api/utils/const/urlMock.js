@@ -1,15 +1,15 @@
 const urlMock = {     
         userInfo(id){
-            return `./data/${id}.json` 
+            return `../data/${id}.json` 
         },
         Activity(id){
-            return `./data/${id}activity.json` 
+            return `../data/${id}activity.json` 
         },
         userPerf(id){
-            return `./data/${id}perfomance.json` 
+            return `../data/${id}performance.json` 
         },
         userData(id){
-            return `./data/${id}average.json` 
+            return `../data/${id}average.json` 
         }
     }
 

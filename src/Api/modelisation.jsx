@@ -1,3 +1,8 @@
+/**
+ * @class
+ * @classdesc Receving data from the fetch and stock it for reuse when it needed on this app 
+ */
+
 export class userMainData {
     constructor(userData){
         this.id = userData.data.id;
@@ -14,26 +19,21 @@ export class userMainData {
 
 export class userActivity {
     constructor(userAct){
-        this.id = userAct.data.id;
+        this.id = userAct.data.userId;
         this.sessions = userAct.data.sessions;
-        this.day = userAct.data.sessions.day;
-        this.kilogram = userAct.data.sessions.kilogram;
-        this.calories = userAct.data.sessions.calories; 
     }
 } 
 
 export class userAverageSession{
     constructor(userSess){
-        this.id = userSess.data.id;
+        this.id = userSess.data.userId;
         this.sessions = userSess.data.sessions;
-        this.day = userSess.data.sessions.day; 
-        this.sessionslength = userSess.data.sessions.sessionsLength;
     }
 } 
 
 export class userPerformance {
     constructor(data){
-        this.id = data.data.id;
+        this.id = data.data.userId;
         this.kind = data.data.kind;
         this.data = data.data.data;
     }

@@ -51,6 +51,10 @@
     width: 39px;
     background-color: #E60000;
     border: none;
+    outline: none;
+}
+[role=dialog]{
+    outline: none;
 }
 
 .active_container p {
@@ -60,11 +64,8 @@
     flex-direction: column;
     font-size: 7px;
     color: #FFFFFF;
+    padding: 7px 14px;
     font-family: 'Roboto';
-}
-
-.active_container p :nth-of-type(2){
-    align-self: flex-end;
 }
 
 .graphic_flex {
@@ -123,9 +124,16 @@
 }
 
 .radial_container {
+    position: relative;
     height: 260px;
     width: 260px;
     background: rgba(251, 251, 251, 1);
+}
+
+.radial_container .score {
+    position: absolute;
+    top: 8%;
+    left: 10%;
 }
 
 .value_container {
@@ -195,5 +203,26 @@
     width: 60px;
     border-radius: 6px;
     background-color: rgba(253, 81, 129, 0.1);
+}
+
+.text_graph {
+    position: absolute;
+    top: 36%;
+    left: 40%;
+    z-index: 3;
+}
+
+.text_graph span {
+    font-family: 'Roboto';
+    font-size: 26px;
+    color: rgba(40, 45, 48, 1);
+    font-weight: 700;
+}
+
+.text_graph p {
+    width: 60%;
+    color: rgba(116, 121, 140, 1);
+    font-family: 'Roboto';
+    font-size: 16px;
 }
 

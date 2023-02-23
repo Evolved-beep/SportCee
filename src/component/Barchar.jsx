@@ -1,7 +1,14 @@
 import React from "react";
 import { BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend, Bar, CartesianGrid, CartesianAxis } from "recharts";
 
+/**
+ * 
+ * @param {object} dataActivity 
+ * @returns number
+ */
+
 const Barchart = ({dataActivity}) => {
+  console.log(dataActivity)
     const resultData = []
     for(let i = 0; i < dataActivity.length; i++){
         const dayUpdate = (i + 1).toString()
@@ -18,6 +25,12 @@ const Barchart = ({dataActivity}) => {
             <p>{payload[1].value}kCal</p>
         </div>
     ) : null 
+
+    /**
+     * @component
+     * @param {array} resultData contain users kilogram and calories value per day
+     * @returns jsx recharts component
+     */
     
     return(
         <div className="graphic_container">

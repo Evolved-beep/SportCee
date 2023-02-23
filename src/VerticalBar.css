@@ -1,20 +1,25 @@
+.vertical_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 117px;
+    background-color: #020203;
+}
+
 .bar_container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 117px;
-    max-height: 100%;
-    background-color: #020203;
-
 } 
 
-.bar_container span {
-    text-align: end;
+.vertical_container span {
     font-family: 'Roboto';
     font-size: 12px;
     transform: rotate(-90deg);
     color: rgba(255, 255, 255, 1);
+    justify-self:flex-end;
 }
 
 .icon_container {

@@ -9,6 +9,12 @@ import {
     ResponsiveContainer
   } from "recharts";
 
+  /**
+   * 
+   * @param {object} dataUserKind
+   * @returns string or null
+   */
+
   const Radarchart = ({dataUserPerformance}) => {
     const userPerfArray = []
     for(let i = 0; i < dataUserPerformance.length; i++){
@@ -30,12 +36,18 @@ import {
         }
     }
     
+    /**
+     * @component
+     * @param {array} userPerfArray contain value from user performance
+     * @returns jsx recharts component
+     */
+
     return(
         <div className="radar_container">
             <ResponsiveContainer height="100%" width="100%">
                 <RadarChart data={userPerfArray}>
-                    <PolarGrid />
-                    <PolarAngleAxis dataKey="kind" tickFormatter={valueKind} style={{fontSize:"8px"}} />
+                    <PolarGrid radialLines={false}/>
+                    <PolarAngleAxis dataKey="kind" tickFormatter={valueKind} style={{fontSize:"6px"}} stroke={"#FFF"} tickLine={false} />
                     <PolarRadiusAxis tick={false} tickCount={6} axisLine={false}/>
                     <Radar
                     dataKey="value"

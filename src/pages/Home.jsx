@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../Api/context/index";
 import '../Home.css'
 
+/**
+ * @params {string} switchAPI
+ * @returns Homepage includes component
+ */
+
 const Homepage = () => {
     const { switchAPI } = useContext(ThemeContext)
     return(

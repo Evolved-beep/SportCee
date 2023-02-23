@@ -1,6 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "../VerticalBar.css"
 
+/**
+ * vertical navigation
+ * @component
+ * @returns jsx component
+ */
 const VerticalBar = () => {
 
     const pictureArray = [
@@ -10,6 +15,7 @@ const VerticalBar = () => {
         "../../../img/haltere.png"
     ]
     return(
+        <div className="vertical_container">
             <div className="bar_container">
                 {pictureArray.map((icon) => {
                     return(
@@ -18,8 +24,9 @@ const VerticalBar = () => {
                         </div>
                     )
                 })}
-                <span>Copyright, SportSee 2020</span>
             </div>
+            <span>Copyright, SportSee 2020</span>
+        </div>
     )
 
 }

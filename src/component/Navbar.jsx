@@ -1,6 +1,12 @@
 import React from "react";
 import '../Navbar.css'
 
+/**
+ * horizontal navbar
+ * @component
+ * @returns jsx component
+ */
+
 const Navbar = () => {
     return(
         <nav>

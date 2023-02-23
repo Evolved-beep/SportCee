@@ -1,6 +1,12 @@
 import React from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,  ResponsiveContainer, Rectangle } from 'recharts';
 
+/**
+ * @component
+ * @param {object} dataUserSession contain entire week day and the duration of the session 
+ * @returns jsx recharts component
+ */
+
 const SessionAverage = ({dataUserSession}) => {
     const sessionArray = []
     for(let i = 0; i < dataUserSession.length; i++){
