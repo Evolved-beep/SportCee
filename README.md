@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Projet history 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sportsee is an application that can help people to follow their performance through several graphic which could help them to reach their goal 
 
-## Available Scripts
+## How install the project ? 
 
-In the project directory, you can run:
+You need to clone the project with this github repository https://github.com/Evolved-beep/SportCee. 
+Then you need to use npm install for install all of the dependencies which are present on this projet.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend
+For running the backend you need to use the npm run dev command it will lunch it on localhost:3000 and then you will have access to the database
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend 
+For running the frontend you will just need to run the npm start command it will redirect you to the localhost:3001 as the :3000 is for the backend
 
-### `npm test`
+# Homepage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Users
+There is only 2 available user's page (12 and 18) 
+You can navigate between these page by changing the url or with the 2 buttons with the user's name on the homepage
 
-### `npm run build`
+### Data from database or datamock 
+You can also switch the way you receive the data. The button between the user's button can switch the fetch call.. The call by default is from the database so take care to lunch the database before run the start command.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Endpoint 
+This project includes four endpoints that you will be able to use:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+http://localhost:3000/user/${userId} - retrieves information from a user. This first endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
 
-### `npm run eject`
+http://localhost:3000/user/${userId}/activity - retrieves a user's activity day by day with kilograms and calories.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+http://localhost:3000/user/${userId}/average-sessions - retrieves the average sessions of a user per day. The week starts on Monday.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+http://localhost:3000/user/${userId}/performance - retrieves a user's performance (energy, endurance, etc.).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
