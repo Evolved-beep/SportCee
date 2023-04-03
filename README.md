@@ -7,6 +7,13 @@ Sportsee is an application that can help people to follow their performance thro
 You need to clone the project with this github repository https://github.com/Evolved-beep/SportCee. 
 Then you need to use npm install for install all of the dependencies which are present on this projet.
 
+## Prerequisites
+React(V.18.2.0)
+React Router Dom(V.6.8.0)
+Recharts(V.2.3.2)
+NodeJs(V.18.3.0)
+NPM(V.8.11.0)
+
 
 ### Backend
 For running the backend you need to use the npm run dev command it will lunch it on localhost:3000 and then you will have access to the database
