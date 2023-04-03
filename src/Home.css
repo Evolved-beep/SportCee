@@ -26,3 +26,15 @@
     text-decoration: none;
     color: #FFFFFF;
 }
+
+@media screen and (min-width:1024px) and (max-width:1300px) {
+
+    .home_container h2 {
+        font-size: 18px;
+    }
+    
+    .button_container button {
+        padding: 7px 14px;
+        font-size: 14px;
+    }
+}

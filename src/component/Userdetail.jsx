@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 /**
  * @component
@@ -49,5 +50,9 @@ const Userdetail = ({value}) => {
     )
 
 }
+
+Userdetail.propTypes = {
+    value: PropTypes.object
+  };
 
 export default Userdetail

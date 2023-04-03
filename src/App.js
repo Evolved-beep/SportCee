@@ -10,20 +10,20 @@ import './App.css'
 function App() {
   return (
     <ApiProvider>
+      <BrowserRouter>
       <div>
         <Navbar />
         <div className='container'>
         <VerticalBar />
       <div className='component_container'>
-        <BrowserRouter>
           <Routes>
             <Route path='/' element={<Homepage />} />
             <Route path='/user/:id' element={<Dashboard />} />
           </Routes>
-        </BrowserRouter>
       </div>
         </div>
       </div>
+        </BrowserRouter>
     </ApiProvider>
   )
 }

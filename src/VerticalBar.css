@@ -12,14 +12,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 80%;
 } 
 
 .vertical_container span {
     font-family: 'Roboto';
     font-size: 12px;
-    transform: rotate(-90deg);
+    transform: rotate(270deg);
     color: rgba(255, 255, 255, 1);
-    justify-self:flex-end;
+    
 }
 
 .icon_container {
@@ -33,3 +34,18 @@
     margin-bottom: 10px;
 }
 
+
+@media screen and (min-width: 1024px) and (max-width:1300px){
+    .icon_container {
+        height: 40px;
+        width: 40px;
+    }
+
+    .icon_container img {
+        height: 20px;
+    }
+
+    .vertical_container span {
+        font-size: 10px;
+    }
+}

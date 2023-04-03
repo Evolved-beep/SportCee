@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import '../Navbar.css'
 
 /**
@@ -10,7 +11,7 @@ import '../Navbar.css'
 const Navbar = () => {
     return(
         <nav>
-            <img src="../../../img/logo.png" alt="" />
+            <Link to="/"><img src="../../../img/logo.png" alt="" /></Link>
             <ul>
                 <li>Accueil</li>
                 <li>Profil</li>

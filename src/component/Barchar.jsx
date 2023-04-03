@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend, Bar, CartesianGrid, CartesianAxis } from "recharts";
+import PropTypes from "prop-types";
 
 /**
  * 
@@ -7,35 +8,49 @@ import { BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend, Bar, Cart
  * @returns number
  */
 
+
 const Barchart = ({dataActivity}) => {
   console.log(dataActivity)
-    const resultData = []
-    for(let i = 0; i < dataActivity.length; i++){
-        const dayUpdate = (i + 1).toString()
-        resultData.push({
-            day : dayUpdate,
-            kilogram: dataActivity[i].kilogram,
-            calories: dataActivity[i].calories
-        })
-    }
-
-    const CustomTooltip = ({active, payload}) => active ? (
-        <div className="active_container">
+  const resultData = []
+  for(let i = 0; i < dataActivity.length; i++){
+    const dayUpdate = (i + 1).toString()
+    resultData.push({
+      day : dayUpdate,
+      kilogram: dataActivity[i].kilogram,
+      calories: dataActivity[i].calories
+    })
+  }
+  
+  console.log(dataActivity)
+  const CustomTooltip = ({active, payload}) => active ? (
+    <div className="active_container">
             <p>{payload[0].value}kg</p>
             <p>{payload[1].value}kCal</p>
         </div>
     ) : null 
-
+    
     /**
      * @component
      * @param {array} resultData contain users kilogram and calories value per day
      * @returns jsx recharts component
-     */
-    
-    return(
-        <div className="graphic_container">
+    */
+
+   return(
+     <div className="graphic_container">
+          <section className="legend_container">
           <span className="activite">Activité quotidienne</span>
-        <ResponsiveContainer width="100%" height="100%">
+          <div className="data_legend">
+            <div className="kilogram_container">
+              <div className="kilo_point"></div>
+              <span>Poids(kg)</span>
+            </div>
+            <div className="calories_container">
+              <div className="calories_point"></div>
+              <span>Calories brulées(kCal)</span>
+            </div>
+          </div>
+          </section>
+        <ResponsiveContainer width="100%" height="92%">
         <BarChart
           data={resultData}
           margin={{
@@ -65,9 +80,8 @@ const Barchart = ({dataActivity}) => {
           />
           <CartesianGrid strokeDasharray="1" vertical={false} />
           <CartesianAxis />
-          <Legend verticalAlign="top" align="right" iconType={"circle"} iconSize={8}  />
+          <Legend iconType={"circle"} cy={3} iconSize={8} className='test' />
           <Tooltip  content={<CustomTooltip/>}/>
-          <Legend />
           <Bar yAxisId="kilogram" dataKey="kilogram" name="Poids (kg)" radius={[5,5,0,0]} barSize={10} fill="#282D30" />
           <Bar yAxisId="calories" dataKey="calories" name="Calories Brulées (kCal)" radius={[5,5,0,0]} barSize={10} fill="#E60000" />
         </BarChart>
@@ -75,6 +89,10 @@ const Barchart = ({dataActivity}) => {
       </div>
     )
 
-}
-
-export default Barchart
+  }
+  
+  Barchart.propTypes = {
+    dataActivity: PropTypes.array
+  };
+ 
+  export default Barchart

@@ -33,6 +33,5 @@ export const GetData = (urlFetch) => {
         }
       });
   }, [urlFetch]);
-  console.log("result=", result)
   return result
 };

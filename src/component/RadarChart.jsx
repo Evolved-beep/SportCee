@@ -1,4 +1,3 @@
-import { type } from "@testing-library/user-event/dist/type";
 import React from "react";
 import {
     Radar,
@@ -8,10 +7,11 @@ import {
     PolarRadiusAxis,
     ResponsiveContainer
   } from "recharts";
+  import PropTypes from 'prop-types';
 
   /**
    * 
-   * @param {object} dataUserKind
+   * @param {object} dataUserPerformance
    * @returns string or null
    */
 
@@ -60,5 +60,10 @@ import {
     )
 
   }
+
+  RadarChart.propTypes = {
+    dataUserPerformance: PropTypes.array
+  };
+ 
 
   export default Radarchart

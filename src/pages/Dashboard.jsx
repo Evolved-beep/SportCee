@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 import { GetData } from "../Api/fetch";
 import { useParams } from "react-router-dom"; 
 import '../Dashboard.css'
@@ -8,6 +8,8 @@ import SessionAverage from "../component/Session";
 import Radialbar from "../component/Radialbar";
 import Userdetail from "../component/Userdetail";
 import { ThemeContext} from "../Api/context/index";
+import urlMock from "../Api/utils/const/urlMock";
+import urlAPI from "../Api/utils/const/urlAPI";
 
 /**
  * @params {number} id
@@ -20,16 +22,18 @@ const Dashboard = () => {
 
     const { id } = useParams()
     const { api } = useContext(ThemeContext)
+    console.log("data from", api)
+    const url = api === "api" ? urlAPI : urlMock
 
-         const dataUser = GetData(api.userInfo(id))
-         const dataUserActivity = GetData(api.Activity(id))
-         const dataAverage = GetData(api.userData(id))
-         const dataPerformance = GetData(api.userPerf(id))
+         const dataUser = GetData(url.userInfo(id))
+         const dataUserActivity = GetData(url.Activity(id))
+         const dataAverage = GetData(url.userData(id))
+         const dataPerformance = GetData(url.userPerf(id))
+
          
     if(dataUser === undefined || dataUserActivity === undefined || dataAverage === undefined || dataPerformance === undefined){
-        return <h1>Loading...</h1>
-    }
-    console.log(dataUser)
+          return <h1 className="error">Erreur...</h1>
+    } 
     return(
         <div className="dashboard_container">
             <div className="user_container">
@@ -45,7 +49,7 @@ const Dashboard = () => {
                         <SessionAverage dataUserSession={dataAverage.sessions} />
                         <Radarchart dataUserPerformance={dataPerformance.data} 
                                     dataUserKind={dataPerformance.kind}/>
-                        <Radialbar userDada={dataUser.todayscore*100}/>
+                        <Radialbar userDada={dataUser.todayscore}/>
                     </div>
                 </div>
                     <Userdetail value={dataUser}/>

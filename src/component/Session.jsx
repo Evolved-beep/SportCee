@@ -1,5 +1,6 @@
 import React from "react";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,  ResponsiveContainer, Rectangle } from 'recharts';
+import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import PropTypes from "prop-types";
 
 /**
  * @component
@@ -47,5 +48,10 @@ const SessionAverage = ({dataUserSession}) => {
     )
 
 }
+
+SessionAverage.propTypes = {
+    dataUserSession: PropTypes.array
+  };
+ 
 
 export default SessionAverage

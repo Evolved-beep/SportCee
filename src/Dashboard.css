@@ -12,6 +12,11 @@
     margin: 20px 0;
 }
 
+.error {
+    font-family: 'Roboto';
+    vertical-align: middle;
+}
+
 .user_container span {
     margin: 0 20px;
     color: #FF0101;
@@ -37,13 +42,64 @@
     background-color: #FBFBFB;
     height: 300px;
     border-radius: 5px;
+    overflow: hidden;
+}
+
+.legend_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 30px;
+    margin-top: 6px;
+}
+
+.data_legend {
+    display: flex;
 }
 
 .activite {
-    position: absolute;
-    top: calc(50% - 24px/2 - 124px);
-    left: 3%;
-    color: rgba(32, 37, 58, 1)
+    font-family: 'Roboto';
+    font-size: 15px;
+    color: rgba(32, 37, 58, 1);
+}
+
+.kilogram_container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.kilogram_container span {
+    font-family: 'Roboto';
+    font-size: 14px;
+    color: rgba(116, 121, 140, 1);
+    margin: 0 10px;
+}
+
+.kilo_point {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #E60000;
+}
+
+.calories_container{
+    display: flex;
+    align-items: center;
+}
+
+.calories_container span {
+    font-family: 'Roboto';
+    font-size: 14px;
+    color: rgba(116, 121, 140, 1);
+    margin: 0 10px;
+}
+
+.calories_point {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #000000;
+
 }
 
 .active_container {
@@ -70,7 +126,7 @@
 
 .graphic_flex {
     display: flex;
-    margin: 40px 0;
+    margin: 40px 0 0 0;
     width: 100%;
 }
 
@@ -146,6 +202,10 @@
     background-color: rgba(251, 251, 251, 1);
     margin-bottom: 34px;
     margin-left: 20px;
+}
+
+.value_container:nth-of-type(:last-child){
+    margin-bottom: 0;
 }
 
 .calories {
@@ -226,3 +286,75 @@
     font-size: 16px;
 }
 
+@media screen and (min-width:1024px) and (max-width:1300px) {
+    .user_container h1 {
+        font-size: 20px;
+    }
+
+    .user_container p {
+        font-size: 14px;
+    }
+
+    .user_container span {
+        margin: 0 10px;
+    }
+
+    .error {
+        font-size: 12px;
+    }
+
+    .graphic_container {
+        width: 640px;
+        height: 300px;
+    }
+
+    .graphic_flex {
+        margin: 30px 0 0 0;
+    }
+
+    .line_container, .radar_container, .radial_container{
+        height: 180px;
+        width: 200px;
+    }
+
+    .value_container {
+        width: 200px;
+    }
+
+    .calories, .lipides, .glucides, .proteines {
+        height: 40px;
+        width: 40px;
+    }
+
+    .value_container {
+        margin-bottom: 5px;
+        width: 180px;
+    }
+    .user_detail span {
+        font-size: 14px;
+    }
+    
+    .user_detail p {
+        font-size: 12px;
+    }
+    
+    .duree {
+        font-size: 12px;
+    }
+    
+    .duree_session {
+        font-size: 12px;
+    }
+
+    .radial_container .score {
+        font-size: 12px;
+    }
+
+    .text_graph span {
+        font-size: 14px;
+    }
+
+    .text_graph p {
+        font-size: 12px;
+    }
+}

@@ -1,6 +1,8 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ThemeContext } from "../Api/context/index";
+import { ThemeContext } from "../Api/context";
+import useSwitchAPI from "../Api/hook/useSwitchAPI";
 import '../Home.css'
 
 /**
@@ -9,14 +11,17 @@ import '../Home.css'
  */
 
 const Homepage = () => {
-    const { switchAPI } = useContext(ThemeContext)
+
+   /*  const [api, switchAPI,typeApi] = useSwitchAPI() */
+    const {api, useSwitchAPI} = useContext(ThemeContext)
+
     return(
         <Fragment>
             <div className="home_container">
                 <h2>Se connecter en tant que:</h2>
                 <div className="button_container">
                     <button><Link to="/user/12">Karl</Link></button>
-                    <button onClick={() => switchAPI()}>Switch API</button>
+                    <button onClick={useSwitchAPI}>data from {api}</button>
                     <button><Link to="/user/18">Cecilia</Link></button>
                 </div>
             </div>
