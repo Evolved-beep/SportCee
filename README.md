@@ -9,9 +9,13 @@ Then you need to use npm install for install all of the dependencies which are p
 
 ## Prerequisites
 React(V.18.2.0)
+
 React Router Dom(V.6.8.0)
+
 Recharts(V.2.3.2)
+
 NodeJs(V.18.3.0)
+
 NPM(V.8.11.0)
 
 
