@@ -11,8 +11,6 @@ import '../Home.css'
  */
 
 const Homepage = () => {
-
-   /*  const [api, switchAPI,typeApi] = useSwitchAPI() */
     const {api, useSwitchAPI} = useContext(ThemeContext)
 
     return(

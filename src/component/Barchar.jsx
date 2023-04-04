@@ -10,7 +10,6 @@ import PropTypes from "prop-types";
 
 
 const Barchart = ({dataActivity}) => {
-  console.log(dataActivity)
   const resultData = []
   for(let i = 0; i < dataActivity.length; i++){
     const dayUpdate = (i + 1).toString()
@@ -20,8 +19,6 @@ const Barchart = ({dataActivity}) => {
       calories: dataActivity[i].calories
     })
   }
-  
-  console.log(dataActivity)
   const CustomTooltip = ({active, payload}) => active ? (
     <div className="active_container">
             <p>{payload[0].value}kg</p>

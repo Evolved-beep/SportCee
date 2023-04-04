@@ -133,14 +133,14 @@
 .line_container {
     position: relative;
     width: 260px;
-    height: 260px;
+    height: 250px;
     background:#FF0000;
     margin-right: 20px;
 }
 
 .radar_container{
     width: 260px;
-    height: 260px;
+    height: 250px;
     background: #282D30;
     margin-right: 20px;
 }
@@ -181,7 +181,7 @@
 
 .radial_container {
     position: relative;
-    height: 260px;
+    height: 250px;
     width: 260px;
     background: rgba(251, 251, 251, 1);
 }
@@ -196,16 +196,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 124px;
+    height: 125px;
     width: 240px;
     border-radius: 5px;
     background-color: rgba(251, 251, 251, 1);
-    margin-bottom: 34px;
+    margin-bottom: 30px;
     margin-left: 20px;
-}
-
-.value_container:nth-of-type(:last-child){
-    margin-bottom: 0;
 }
 
 .calories {
@@ -314,10 +310,6 @@
 
     .line_container, .radar_container, .radial_container{
         height: 180px;
-        width: 200px;
-    }
-
-    .value_container {
         width: 200px;
     }
 

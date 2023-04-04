@@ -22,7 +22,6 @@ const Dashboard = () => {
 
     const { id } = useParams()
     const { api } = useContext(ThemeContext)
-    console.log("data from", api)
     const url = api === "api" ? urlAPI : urlMock
 
          const dataUser = GetData(url.userInfo(id))
